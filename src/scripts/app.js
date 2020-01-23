@@ -1,26 +1,30 @@
+$('document').ready(() => App())
 
-//Validação de campo de texto com preenchimento obrigatório
-
-function validaCampoTexto(id) {
-var valor = document.getElementById(id).value;
-//testa se o valor é nulo, vazio ou formado por apenas espaços em branco
-if ( (valor == null) || (valor == "") || (/^\s+$/.test(valor)) ) {
-    alert("Por favor, preencha o campo " + id )
-return false;
-}
-return true;
+function App() {
+	validacao('#formulario')
 }
 
-//Validação de tamanho em campos de texto:
-function validaCampoTextoTamanho(id, minimo, maximo) {
-var valor = document.getElementById(id).value;
-if (!validaCampoTexto(id)) {
-return false;
-}   
-    
-if ( (valor.length < minimo) || (valor.length > maximo)) {
-    alert("Tente de novo, tamanho de "+ id+"  invalido");
-return false;
-}
-return true
+function validacao(form_id) {
+	const form_config = {
+		rules: {
+			nome: { required: true, minlength: 5 },
+			senha: { required: true, minlength: 5 },
+			email: { required: true }
+		},
+		messages: {
+			nome: {
+				required: 'Campo nome é obrigatório',
+				minlength: 'O nome deve possuir no mínimo 5 caracteres'
+			},
+			senha: {
+				required: 'Campo senha é obrigatório',
+				minlength: 'A senha deve possuir no mínimo 5 caracteres'
+			},
+			email: {
+				required: 'Campo email é obrigatório'
+			}
+		}
+	}
+
+	$(form_id).validate(form_config)
 }

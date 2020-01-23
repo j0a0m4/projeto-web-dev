@@ -8,10 +8,9 @@
 		<link rel="stylesheet" href="./styles/app.css" />
 		<title>Curso</title>
 	</head>
-
 	<body>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<a class="navbar-brand" href="#">NavBar</a>
+			<a class="navbar-brand" href="#">Curso</a>
 			<button
 				class="navbar-toggler"
 				type="button"
@@ -28,7 +27,7 @@
 					<li class="nav-item">
 						<a class="nav-link" href="#">Home</a>
 					</li>
-					<li class="nav-item active">
+					<li class="nav-item">
 						<a class="nav-link" href="#"
 							>Sobre <span class="sr-only">(Página atual)</span></a
 						>
@@ -51,118 +50,54 @@
 				</ul>
 			</div>
 		</nav>
-		<form
-			name="escola.administrador"
-			method="post"
-			onsubmit="return validaCampoTextoTamanho('nome', 3, 50)&&validaCampoTextoTamanho('login',3,20) && validaCampoTextoTamanho('senha', 3, 255 )"
-		>
-			Nome: <input type="text" name="firstname" id="nome" /><br />
-			Login: <input type="text" name="Login" id="login" /><br />
-			Senha: <input type="password" name="senha" id="senha" /><br />
-			<input type="submit" value="Enviar" /><br />
+		<form method="POST" id="formulario">
+			<h1>Formulário</h1>
+			<p>
+				Campo obrigatório
+				<abbr title="obrigatório">*</abbr>
+			</p>
+			<section>
+				<h2>
+					Dados Pessoais
+				</h2>
+				<p>
+					<label for="nome">
+						<span>Nome Completo</span>
+						<abbr title="obrigatório">*</abbr>
+					</label>
+					<input type="text" name="nome" id="nome" />
+				</p>
+				<p>
+					<label for="nascimento">
+						<span>Data de Nascimento</span>
+						<abbr title="obrigatório">*</abbr>
+					</label>
+					<input type="date" name="nascimento" id="nascimento" />
+				</p>
+				<p>
+					<label for="email">
+						<span>Email</span>
+						<abbr title="obrigatório">*</abbr>
+					</label>
+					<input type="email" name="email" id="email" required />
+				</p>
+				<p>
+					<label for="senha">
+						<span>Senha</span>
+						<abbr title="obrigatório">*</abbr>
+					</label>
+					<input type="password" name="senha" id="senha" required />
+				</p>
+			</section>
+			<button type="submit">Enviar</button>
 		</form>
 
-		<form
-			name="escola.alunos"
-			method="post"
-			onsubmit="return validaCampoTextoTamanho('cpf', 3, 11)&&validaCampoTextoTamanho('nome',3,50) && validaCampoTextoTamanho('email', 3, 50 ) && validaCampoTextoTamanho('cel',3,14) && validaCampoTextoTamanho('login',3,20)&& validaCampoTextoTamanho('senha',3, 255) && validaCampoTextoTamanho('adress',3, 50) && validaCampoTextoTamanho('cidade',3,30)&& validaCampoTextoTamanho('bairro',3,30)&&validaCampoTextoTamanho('cep',3,9)"
-		>
-			Cpf:<input type="number" name="cpf" id="cpf" /><br />
-			Nome: <input type="text" name="firstname" id="nome" /><br />
-			Email: <input type="email" name="Email" id="email" /><br />
-			Celular: <input type="tel" name="Cel" id="cel" /><br />
-			Login:<input type="text" name="Login" id="login" /><br />
-			Senha:<input type="password" name="Senha" id="senha" /><br />
-			Endereço:<input type="text" name="Endereço" id="adress" /><br />
-			Cidade:<input type="text" name="Cidade" id="cidade" /><br />
-			Bairro:<input type="text" name="Bairro" id="bairro" /><br />
-			CEP:<input type="number" name="CEP" id="cep" /><br />
-			<input type="submit" value="Enviar" /><br />
-		</form>
-
-		<form
-			name="escola.matriculas"
-			method="post"
-			onsubmit="return validaCampoTextoTamanho('turmas_id', 3, 10)&&validaCampoTextoTamanho('alunos_id',3,11) && validaCampoTextoTamanho('nota', 3, 11 )"
-		>
-			<input type="text" name="firstname" id="nome" /><br />
-
-			Turmas_id:<input type="number" name="turmas id" id="turmas_id" /><br />
-			Alunos_id:<input type="number" name="alunos id" id="alunos_id" /><br />
-			Data_matricula:<input
-				type="date"
-				name="data matrícula"
-				id="data_matricula"
-			/>
-			<br />
-			Nota:<input type="number" name="nota" id="nota" /> <br />
-			<input type="submit" value="Enviar" /><br />
-		</form>
-
-		<form
-			name="escola.turmas"
-			method="post"
-			onsubmit="return validaCampoTextoTamanho('instrutores_id', 3, 11)&&validaCampoTextoTamanho('cursos_id',3,10) && validaCampoTextoTamanho('carga_horaria', 3, 5 )"
-		>
-			<input type="text" name="firstname" id="nome" /><br />
-
-			Instrutores_id:<input
-				type="number"
-				name="instrutores id"
-				id="instrutores_id"
-			/><br />
-			Cursos_id:<input type="number" name="cursos id" id="cursos_id" /><br />
-			Data_inicio:<input type="date" name="data inicio" id="data_inicio" />
-			<br />
-			Data_final:<input type="date" name="data final" id="data_final" /> <br />
-			Carga_Horária:<input
-				type="number"
-				name="carga horaria"
-				id="carga_horaria"
-			/>
-			<br />
-			<input type="submit" value="Enviar" /><br />
-		</form>
-
-		<form
-			name="escola.cursos"
-			method="post"
-			onsubmit="return validaCampoTextoTamanho('nome', 3, 50)&&validaCampoTextoTamanho('requisitos',3,255) && validaCampoTextoTamanho('ementa', 3, 255 ) && validaCampoTextoTamanho('preco',3, maximo)"
-		>
-			<input type="text" name="firstname" id="nome" /><br />
-
-			Nome:<input type="text" name="nome" id="nome" /><br />
-			Requisito:<input type="text" name="requisito" id="requisito" /><br />
-			Ementa:<input type="text" name="ementa" id="ementa" /> <br />
-			Carga_Horária:<input
-				type="number"
-				name="carga horaria"
-				id="carga_horaria"
-			/>
-			<br />
-			Preço:<input type="number" name="preço" id="preco" /> <br />
-			<input type="submit" value="Enviar" /><br />
-		</form>
-
-		<form
-			name="escola.instrutores"
-			method="post"
-			onsubmit="return validaCampoTextoTamanho('nome', 3, 50)&&validaCampoTextoTamanho('email',3,50) && validaCampoTextoTamanho('valor_hora', 3, 10) && validaCampoTextoTamanho('login',3, 20) && validaCampoTextoTamanho('senha',3,255)"
-		>
-			<input type="text" name="firstname" id="nome" /><br />
-
-			Nome:<input type="text" name="nome" id="nome" /><br />
-			Email:<input type="email" name="email" id="email" /><br />
-			Valor Hora:<input type="number" name="valor hora" id="valor_hora" />
-			<br />
-			Login:<input type="text" name="login" id="login" /> <br />
-			Senha:<input type="text" name="senha" id="senha" /> <br />
-			<input type="submit" value="Enviar" /><br />
-		</form>
-
+		<!-- Bibliotecas -->
 		<script src="../lib/jquery/jquery-3.4.1.min.js"></script>
+		<script src="../lib/jquery/jquery.validate.min.js"></script>
 		<script src="../lib/popper/popper.min.js"></script>
 		<script src="../lib/bootstrap/bootstrap.min.js"></script>
+		<!-- Script Projeto -->
 		<script src="./scripts/app.js"></script>
 	</body>
 </html>
