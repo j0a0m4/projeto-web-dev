@@ -48,6 +48,49 @@
 				</ul>
 			</div>
 		</nav>
+		<main class="container">
+			<form method="POST" id="formulario">
+				<h1>Formulário</h1>
+				<p>
+					Campo obrigatório
+					<abbr title="obrigatório">*</abbr>
+				</p>
+				<section>
+					<h2>
+						Dados Pessoais
+					</h2>
+					<p>
+						<label for="nome">
+							<span>Nome Completo</span>
+							<abbr title="obrigatório">*</abbr>
+						</label>
+						<input type="text" name="nome" id="nome" />
+					</p>
+					<p>
+						<label for="nascimento">
+							<span>Data de Nascimento</span>
+							<abbr title="obrigatório">*</abbr>
+						</label>
+						<input type="date" name="nascimento" id="nascimento" />
+					</p>
+					<p>
+						<label for="email">
+							<span>Email</span>
+							<abbr title="obrigatório">*</abbr>
+						</label>
+						<input type="email" name="email" id="email" required />
+					</p>
+					<p>
+						<label for="senha">
+							<span>Senha</span>
+							<abbr title="obrigatório">*</abbr>
+						</label>
+						<input type="password" name="senha" id="senha" required />
+					</p>
+				</section>
+				<button type="submit">Enviar</button>
+			</form>
+		</main>
 
 		<!-- Bibliotecas -->
 		<script src="../lib/jquery/jquery-3.4.1.min.js"></script>
