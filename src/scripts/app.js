@@ -4,8 +4,9 @@ function App() {
 	validacao('#formulario')
 }
 
-function validacao(form_id) {
-	const form_config = {
+function validacao(
+	form_id,
+	form_config = {
 		rules: {
 			nome: { required: true, minlength: 5 },
 			senha: { required: true, minlength: 5 },
@@ -25,6 +26,6 @@ function validacao(form_id) {
 			}
 		}
 	}
-
+) {
 	$(form_id).validate(form_config)
 }
