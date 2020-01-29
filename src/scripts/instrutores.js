@@ -17,7 +17,7 @@ function criar_cards(infos) {
 	return cards
 }
 
-function render_cards(element, cards) {
+function renderizar(element, cards) {
 	for (let card of cards) {
 		$(element).append(card)
 	}
@@ -25,7 +25,7 @@ function render_cards(element, cards) {
 
 function init(infos = data) {
 	const cards_instrutores = criar_cards(infos)
-	render_cards('.instrutores', cards_instrutores)
+	renderizar('.instrutores', cards_instrutores)
 }
 
 const data = [
