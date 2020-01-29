@@ -1,4 +1,5 @@
-import Card from './Card.js'
+import { criar_cards, renderizar } from './app.js'
+import CardInstrutor from './CardInstrutor.js'
 
 class Instrutor {
 	constructor(title, desc, src) {
@@ -8,23 +9,8 @@ class Instrutor {
 	}
 }
 
-function criar_cards(infos) {
-	const cards = []
-	for (let info of infos) {
-		let new_card = Card(info)
-		cards.push(new_card)
-	}
-	return cards
-}
-
-function renderizar(element, cards) {
-	for (let card of cards) {
-		$(element).append(card)
-	}
-}
-
 function init(infos = data) {
-	const cards_instrutores = criar_cards(infos)
+	const cards_instrutores = criar_cards(infos, CardInstrutor)
 	renderizar('.instrutores', cards_instrutores)
 }
 
