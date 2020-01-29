@@ -10,10 +10,10 @@
 			href="../../lib/bootstrap/bootstrap.min.css"
 		/>
 		<link rel="stylesheet" type="text/css" href="../styles/app.css" />
-		<title>Curso Lero Lero</title>
+		<title>Curso Lero Lero - Início</title>
 	</head>
 	<body>
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 			<a class="navbar-brand" href="./index.html">Curso Lero Lero</a>
 			<button
 				class="navbar-toggler"
@@ -28,7 +28,7 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav">
-					<li class="nav-item">
+					<li class="nav-item active">
 						<a class="nav-link" href="./index.html">Home</a>
 					</li>
 					<li class="nav-item">
@@ -52,12 +52,38 @@
 				</ul>
 			</div>
 		</nav>
+		<main class="container-fluid bg-dark pt-4 d-flex justify-content-center">
+			<section class="row">
+				<article class="col">
+					<div
+						class="jumbotron d-flex flex-column bg-dark text-white border border-secondary"
+					>
+						<h1 class="display-4 d-none d-sm-block">Curso Lero Lero</h1>
+						<h1 class="d-sm-none">Curso Lero Lero</h1>
+						<p class="lead mt-2">
+							Preparando você para aproveitar a vida: contemplando o espaço e
+							apreciando o ócio.
+						</p>
+						<hr class="my-4" />
+						<p>
+							Não faça hoje o que você pode deixar para amanhã.
+						</p>
+						<a
+							class="btn btn-primary btn-lg align-self-md-end"
+							href="./sobre.html"
+							role="button"
+							>Saiba mais</a
+						>
+					</div>
+				</article>
+			</section>
+		</main>
 		<!-- Bibliotecas -->
 		<script src="../../lib/jquery/jquery-3.4.1.min.js"></script>
 		<script src="../../lib/jquery/jquery.validate.min.js"></script>
 		<script src="../../lib/popper/popper.min.js"></script>
 		<script src="../../lib/bootstrap/bootstrap.min.js"></script>
 		<!-- Script Projeto -->
-		<script src="./../scripts/app.js"></script>
+		<script type="module" src="./../scripts/app.js"></script>
 	</body>
 </html>
