@@ -10,8 +10,7 @@ class Instrutor {
 }
 
 function init(infos = data) {
-	const cards_instrutores = criar_cards(infos, CardInstrutor)
-	renderizar('.instrutores', cards_instrutores)
+	renderizar('.instrutores', criar_cards(infos, CardInstrutor))
 }
 
 const data = [
