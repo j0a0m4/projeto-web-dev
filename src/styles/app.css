@@ -1,7 +1,8 @@
-#campo_obrigatorio {
-	color: rgb(157, 157, 250);
-}
-
 .container-fluid {
 	min-height: 93vh;
+}
+
+label.error {
+	margin-top: 0.4rem;
+	color: var(--warning);
 }
