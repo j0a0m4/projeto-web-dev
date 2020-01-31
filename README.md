@@ -11,6 +11,7 @@
 | --------------------- | --------------- |
 | Bibliotecas e plugins | `./lib`         |
 | Código-fonte          | `./src`         |
+| Arquivos estáticos    | `./assets`      |
 | Arquivos HTML         | `./src/pages`   |
 | Arquivos CSS          | `./src/styles`  |
 | Arquivos JS           | `./src/scripts` |
