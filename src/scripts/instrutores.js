@@ -1,4 +1,4 @@
-import { criar_cards, renderizar } from './app.js'
+import App from './app.js'
 import CardInstrutor from './CardInstrutor.js'
 
 class Instrutor {
@@ -9,11 +9,7 @@ class Instrutor {
 	}
 }
 
-function init(infos) {
-	renderizar('.instrutores', criar_cards(infos, CardInstrutor))
-}
-
-const data = [
+const instrutores = [
 	new Instrutor(
 		'Mario',
 		'Trabalha no Curso Lero Lero há 5 anos, especialista em jogar papo fora com os estudantes',
@@ -36,4 +32,4 @@ const data = [
 	)
 ]
 
-init(data)
+App('.instrutores', instrutores, CardInstrutor)

@@ -13,4 +13,8 @@ function renderizar(element, cards) {
 	}
 }
 
-export { criar_cards, renderizar }
+function App(element, infos, component) {
+	renderizar(element, criar_cards(infos, component))
+}
+
+export default App
