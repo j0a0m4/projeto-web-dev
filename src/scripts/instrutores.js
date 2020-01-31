@@ -9,7 +9,7 @@ class Instrutor {
 	}
 }
 
-function init(infos = data) {
+function init(infos) {
 	renderizar('.instrutores', criar_cards(infos, CardInstrutor))
 }
 
