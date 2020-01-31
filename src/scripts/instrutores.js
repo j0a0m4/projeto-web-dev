@@ -2,10 +2,10 @@ import { criar_cards, renderizar } from './app.js'
 import CardInstrutor from './CardInstrutor.js'
 
 class Instrutor {
-	constructor(title, desc, src) {
+	constructor(title, desc, id) {
 		this.title = title
 		this.desc = desc
-		this.src = src
+		this.src = `../../assets/instrutores/${id}.jpeg`
 	}
 }
 
@@ -15,14 +15,24 @@ function init(infos = data) {
 
 const data = [
 	new Instrutor(
-		'Maria',
-		'A instrutora Maria trabalha no Curso Lero Lero há 5 anos, especialista em jogar papo fora com os estudantes',
-		'https://i.pravatar.cc/150?img=34'
+		'Mario',
+		'Trabalha no Curso Lero Lero há 5 anos, especialista em jogar papo fora com os estudantes',
+		18
 	),
 	new Instrutor(
 		'Rafa',
 		'Rafa é nova no Curso e provou ser imbativel na área de selfies espontâneas',
-		'https://i.pravatar.cc/150?img=44'
+		44
+	),
+	new Instrutor(
+		'Han',
+		'Famosa por seus longos textos no facebook, a instrutora Han ensina como dominar essa arte',
+		25
+	),
+	new Instrutor(
+		'Chris',
+		'Suas festas vão bombar depois de aprender com Chris como montar sua playlist perfeita',
+		69
 	)
 ]
 
