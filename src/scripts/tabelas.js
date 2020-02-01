@@ -1,8 +1,13 @@
-function validacao(form_id, form_config) {
-	$(form_id).validate(form_config)
+//  Definição da função que utiliza o jQuery Validator para validar o formulario
+// form_selector (seleciona o formulário para ser validado)
+// form_config (objeto que configura as regras e as mensagens de validação)
+function validacao(form_selector, form_config) {
+	$(form_selector).validate(form_config)
 }
 
+// Definção da função que vai executar as validações
 function validar() {
+	// Formulário Alunos
 	validacao('#formulario-alunos', {
 		rules: {
 			nome: { required: true, minlength: 3, maxlength: 50 },
@@ -45,6 +50,64 @@ function validar() {
 			}
 		}
 	})
+	//  Formulário Cursos
+	validacao('#formulario-cursos', {
+		rules: {
+			nome_curso: { required: true, minlength: 3, maxlength: 50 }
+		},
+		messages: {
+			nome_curso: {
+				required: 'Campo nome curso é obrigatório',
+				minlength: 'Mínimo 3 caractéres',
+				maxlength: 'Máximo 20 caractéres'
+			}
+		}
+	})
+	// Formulário Instrutores
+	validacao('#formulario-instrutores', {
+		rules: {
+			nome_instrutor: { required: true, minlength: 3, maxlength: 50 },
+			email_instrutor: { required: true, minlength: 3, maxlength: 50 },
+			login_instrutor: { required: true, minlength: 3, maxlength: 20 },
+			senha_instrutor: { required: true, minlength: 3, maxlength: 255 },
+			confirma_senha_instrutor: { required: true, equalTo: '#senha' }
+		},
+		messages: {
+			nome_instrutor: {
+				required: 'Campo nome é obrigatório',
+				minlength: 'O nome deve possuir no mínimo 3 caracteres'
+			},
+			email_instrutor: {
+				required: 'Campo email é obrigatório',
+				email: 'Por favor, insira um email válido'
+			},
+			login_instrutor: {
+				required: 'Campo login é obrigatório',
+				minlength: 'Mínimo 3 caractéres',
+				maxlength: 'Máximo 20 caractéres'
+			},
+			senha_instrutor: {
+				required: 'Campo senha é obrigatório',
+				minlength: 'A senha deve possuir no mínimo 3 caracteres'
+			},
+			confirma_senha_instrutor: {
+				required: 'Campo confirmar senha é obrigatório',
+				equalTo: 'As senhas devem coincidir'
+			}
+		}
+	})
+
+	validacao('#formulario-matriculas', {
+		rules: {
+			id_alunos: { required: true },
+			id_turmas: { required: true }
+		},
+		messages: {
+			id_alunos: { required: 'Campo confirmar ID alunos é obrigatório' },
+			id_turmas: { required: 'Campo confirmar ID turmas é obrigatório' }
+		}
+	})
 }
 
+// Quando o DOM estiver pronto, vai chamar a arrow function anônima que executa a função para validar todos os forms
 $('document').ready(() => validar())
