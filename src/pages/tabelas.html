@@ -209,43 +209,77 @@
 						</section>
 						<button type="submit" class="btn btn-success">Enviar</button>
 					</form>
+					<form id="formulario-cursos" class="my-3">
+						<h1>Formulário Cursos</h1>
+						<p>
+							Campo obrigatório
+							<abbr title="obrigatório">*</abbr>
+						</p>
+						<section>
+							<div class="form-group">
+								<label for="nome-curso">
+									<span>Nome</span>
+									<abbr title="obrigatório">*</abbr>
+								</label>
+								<input
+									type="text"
+									name="nome-curso"
+									id="nome-curso"
+									class="form-control"
+									required
+								/>
+							</div>
+							<div class="form-group">
+								<label for="requisito">
+									<span>Requisito</span>
+								</label>
+								<input
+									type="text"
+									name="requisito"
+									id="requisito"
+									class="form-control"
+								/>
+							</div>
+							<div class="form-group">
+								<label for="ementa">
+									<span>Ementa</span>
+								</label>
+								<input
+									type="text"
+									name="ementa"
+									id="ementa"
+									class="form-control"
+								/>
+							</div>
+							<div class="form-group">
+								<label for="carga_horaria_curso">
+									<span>Carga Horária Curso</span>
+								</label>
+								<input
+									type="number"
+									name="carga_horaria_curso"
+									id="carga_horaria_curso"
+									class="form-control"
+								/>
+							</div>
+							<div class="form-group">
+								<label for="preco">
+									<span>Preço</span>
+								</label>
+								<input
+									type="number"
+									name="preco"
+									id="preco"
+									class="form-control"
+								/>
+							</div>
+						</section>
+						<button type="submit" class="btn btn-success">Enviar</button>
+					</form>
 				</article>
 			</section>
 
-			<form
-				name="escola.cursos"
-				method="post"
-				onsubmit="return validaCampoTextoTamanho('nome_curso', 3, 50)&&validaCampoTextoTamanho('requisitos',3,255) && validaCampoTextoTamanho('ementa', 3, 255 ) && validaCampoTexto('carga_horaria_curso',3,5)&&validaCampoTextoTamanho('preco',3, maximo)"
-			>
-				<div class="form-group">
-					<label>Nome</label>
-					<input type="text" class="form-control" id="nome_curso" />
-					<small id="campo_obrigatorio">Campo Obrigatório*</small>
-				</div>
-				<div class="form-group">
-					<label>Requisitos:</label>
-					<input type="text" class="form-control" id="requisitos" />
-				</div>
-				<div class="form-group">
-					<label>Ementa:</label>
-					<input type="text" class="form-control" id="ementa" />
-				</div>
-				<div class="form-group">
-					<label>Carga Horária Curso:</label>
-					<input type="text" class="form-control" id="carga_horaria_curso" />
-				</div>
-				<div class="form-group">
-					<label>Preço:</label>
-					<input type="text" class="form-control" id="preco" />
-				</div>
-				<button type="submit" class="btn btn-primary">Submit</button>
-			</form>
-
-			<form
-				name="escola.instrutores"
-				method="post"
-				onsubmit="return validaCampoTextoTamanho('nome_instrutor', 3, 50)&&validaCampoTextoTamanho('email_instrutor',3,50) && validaCampoTextoTamanho('valor_hora', 3, 10) && validaCampoTextoTamanho('login_instrutor',3, 20) && validaCampoTextoTamanho('senha_instrutor',3,255)"
-			>
+			<form id="formulario-instrutores">
 				<div class="form-group">
 					<label>Nome:</label>
 					<input type="text" class="form-control" id="nome_instrutor" />
@@ -286,11 +320,7 @@
 				<button type="submit" class="btn btn-primary">Submit</button>
 			</form>
 
-			<form
-				name="escola.matriculas"
-				method="post"
-				onsubmit="return validaCampoTextoTamanho('turmas_id', 3, 10)&&validaCampoTextoTamanho('alunos_id',3,11) && validaCampoTextoTamanho('nota', 3, 11 )"
-			>
+			<form id="formulario-matriculas">
 				<div class="form-group">
 					<label>Id turmas:</label>
 					<input type="text" class="form-control" id="turmas_id" />
@@ -312,11 +342,7 @@
 				<button type="submit" class="btn btn-primary">Submit</button>
 			</form>
 
-			<form
-				name="escola.turmas"
-				method="post"
-				onsubmit="return validaCampoTextoTamanho('instrutores_id', 3, 11)&&validaCampoTextoTamanho('cursos_id',3,10) && validaCampoTextoTamanho('carga_horaria_turma', 3, 5 )"
-			>
+			<form id="turmas">
 				<div class="form-group">
 					<label>Id instrutores:</label>
 					<input type="text" class="form-control" id="instrutores_id" />
@@ -342,11 +368,7 @@
 				<button type="submit" class="btn btn-primary">Submit</button>
 			</form>
 
-			<form
-				name="escola.administrador"
-				method="post"
-				onsubmit="return validaCampoTextoTamanho('nome_administrador', 3, 50)&&validaCampoTextoTamanho('login_administrador',3,20) && validaCampoTextoTamanho('senha_administrador', 3, 255 )"
-			>
+			<form id="formulario-administrador">
 				<div class="form-group">
 					<label for="exampleInputPassword1">Nome</label>
 					<input type="password" class="form-control" id="nome_administrador" />
