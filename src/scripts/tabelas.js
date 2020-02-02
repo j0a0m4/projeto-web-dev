@@ -70,7 +70,7 @@ function validar() {
 			email_instrutor: { required: true, minlength: 3, maxlength: 50 },
 			login_instrutor: { required: true, minlength: 3, maxlength: 20 },
 			senha_instrutor: { required: true, minlength: 3, maxlength: 255 },
-			confirma_senha_instrutor: { required: true, equalTo: '#senha' }
+			confirma_senha_instrutor: { required: true, equalTo: '#senha_instrutor' }
 		},
 		messages: {
 			nome_instrutor: {
@@ -105,6 +105,55 @@ function validar() {
 		messages: {
 			id_alunos: { required: 'Campo confirmar ID alunos é obrigatório' },
 			id_turmas: { required: 'Campo confirmar ID turmas é obrigatório' }
+		}
+	})
+
+	validacao('#formulario-turmas', {
+		rules: {
+			id_instrutores: { required: true },
+			id_cursos: { required: true }
+		},
+		messages: {
+			id_instrutores: {
+				required: 'Campo confirmar ID instrutores é obrigatório'
+			},
+			id_cursos: { required: 'Campo confirmar ID cursos é obrigatório' }
+		}
+	})
+
+	validacao('#formulario-administrador', {
+		rules: {
+			nome_administrador: { required: true, minlength: 3, maxlength: 50 },
+			email_administrador: { required: true, minlength: 3, maxlength: 50 },
+			login_administrador: { required: true, minlength: 3, maxlength: 20 },
+			senha_administrador: { required: true, minlength: 3, maxlength: 255 },
+			confirma_senha_administrador: {
+				required: true,
+				equalTo: '#senha_administrador'
+			}
+		},
+		messages: {
+			nome_administrador: {
+				required: 'Campo nome é obrigatório',
+				minlength: 'O nome deve possuir no mínimo 3 caracteres'
+			},
+			email_administrador: {
+				required: 'Campo email é obrigatório',
+				email: 'Por favor, insira um email válido'
+			},
+			login_administrador: {
+				required: 'Campo login é obrigatório',
+				minlength: 'Mínimo 3 caractéres',
+				maxlength: 'Máximo 20 caractéres'
+			},
+			senha_administrador: {
+				required: 'Campo senha é obrigatório',
+				minlength: 'A senha deve possuir no mínimo 3 caracteres'
+			},
+			confirma_senha_administrador: {
+				required: 'Campo confirmar senha é obrigatório',
+				equalTo: 'As senhas devem coincidir'
+			}
 		}
 	})
 }
