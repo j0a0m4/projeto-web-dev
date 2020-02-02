@@ -14,7 +14,7 @@ export default function CardAluno({ nome, comentario, id }) {
       <p>
         ${comentario}
       </p>
-      <footer class="blockquote-footer">
+      <footer class="blockquote-footer logo">
         ${nome}
       </footer>
     </blockquote>

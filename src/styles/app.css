@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Poiret+One&display=swap');
+
 .container-fluid {
 	min-height: 93vh;
 }
@@ -19,4 +21,15 @@ label.error {
 		max-height: 65vh;
 		min-height: 350px;
 	}
+}
+
+.logo {
+	font-family: 'Poiret One', cursive;
+	font-weight: bold;
+}
+.navbar-brand {
+	font-size: 2rem;
+}
+.text {
+	font-size: 1.3rem;
 }

@@ -10,7 +10,7 @@ export default function CardCurso({ title, desc, id }) {
             alt="${title}"
         />
         <div class="card-body">
-            <h5 class="card-title">${title}</h5>
+            <h5 class="card-title logo">${title}</h5>
             <p class="card-text">
                 ${desc}
             </p>
