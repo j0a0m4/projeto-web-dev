@@ -6,6 +6,7 @@ function validar() {
 	validacao('#formulario-alunos', {
 		rules: {
 			nome: { required: true, minlength: 3, maxlength: 50 },
+			nascimento: { date: true },
 			cpf: { required: true, maxlength: 11 },
 			email: { required: true, minlength: 3, maxlength: 50 },
 			tel: { required: true, minlength: 3, maxlength: 14 },
@@ -18,6 +19,7 @@ function validar() {
 				required: 'Campo nome é obrigatório',
 				minlength: 'O nome deve possuir no mínimo 3 caracteres'
 			},
+			nascimento: { date: 'Insira uma data válida' },
 			cpf: {
 				required: 'Campo CPF é obrigatório'
 			},
@@ -95,24 +97,30 @@ function validar() {
 	validacao('#formulario-matriculas', {
 		rules: {
 			id_alunos: { required: true },
-			id_turmas: { required: true }
+			id_turmas: { required: true },
+			data_matricula: { date: true }
 		},
 		messages: {
-			id_alunos: { required: 'Campo confirmar ID alunos é obrigatório' },
-			id_turmas: { required: 'Campo confirmar ID turmas é obrigatório' }
+			id_alunos: { required: 'Campo ID alunos é obrigatório' },
+			id_turmas: { required: 'Campo ID turmas é obrigatório' },
+			data_matricula: { date: 'Insira uma data válida' }
 		}
 	})
 
 	validacao('#formulario-turmas', {
 		rules: {
 			id_instrutores: { required: true },
-			id_cursos: { required: true }
+			id_cursos: { required: true },
+			data_inicio: { date: true },
+			data_final: { date: true }
 		},
 		messages: {
 			id_instrutores: {
-				required: 'Campo confirmar ID instrutores é obrigatório'
+				required: 'Campo ID instrutores é obrigatório'
 			},
-			id_cursos: { required: 'Campo confirmar ID cursos é obrigatório' }
+			id_cursos: { required: 'Campo ID cursos é obrigatório' },
+			data_inicio: { date: 'Insira uma data válida' },
+			data_final: { date: 'Insira uma data válida' }
 		}
 	})
 	// Formulário Adminsitrador
