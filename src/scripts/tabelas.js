@@ -1,9 +1,4 @@
-//  Definição da função que utiliza o jQuery Validator para validar o formulario
-// form_selector (seleciona o formulário para ser validado)
-// form_config (objeto que configura as regras e as mensagens de validação)
-function validacao(form_selector, form_config) {
-	$(form_selector).validate(form_config)
-}
+import { validacao } from './app.js'
 
 // Definção da função que vai executar as validações
 function validar() {
@@ -96,7 +91,7 @@ function validar() {
 			}
 		}
 	})
-
+	// Formulário Matrículas
 	validacao('#formulario-matriculas', {
 		rules: {
 			id_alunos: { required: true },
@@ -120,7 +115,7 @@ function validar() {
 			id_cursos: { required: 'Campo confirmar ID cursos é obrigatório' }
 		}
 	})
-
+	// Formulário Adminsitrador
 	validacao('#formulario-administrador', {
 		rules: {
 			nome_administrador: { required: true, minlength: 3, maxlength: 50 },
