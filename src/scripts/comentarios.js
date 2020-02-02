@@ -5,7 +5,7 @@ class Aluno {
 	constructor(nome, comentario, id) {
 		this.nome = nome
 		this.comentario = comentario
-		this.src = `../../assets/alunos/${id}.jpeg`
+		this.id = id
 	}
 }
 

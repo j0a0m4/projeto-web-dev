@@ -5,7 +5,7 @@ class Instrutor {
 	constructor(title, desc, id) {
 		this.title = title
 		this.desc = desc
-		this.src = `../../assets/instrutores/${id}.jpeg`
+		this.id = id
 	}
 }
 

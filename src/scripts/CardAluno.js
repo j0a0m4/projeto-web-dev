@@ -1,12 +1,12 @@
-export default function CardAluno({ nome, comentario, src }) {
-	const card = `<article class="col d-flex justify-content-center">
+export default function CardAluno({ nome, comentario, id }) {
+	return `<article class="col d-flex justify-content-center">
   <div
   class="card bg-dark text-light border border-tertiary my-3"
   style="width: 18rem;"
 >
   <div class="card-body">
     <img
-      src=${src}
+      src="../../assets/alunos/${id}.jpeg"
       class="card-img-top"
       alt="..."
     />
@@ -21,5 +21,4 @@ export default function CardAluno({ nome, comentario, src }) {
   </div>
 </div>
 </article>`
-	return card
 }
