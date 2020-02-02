@@ -20,7 +20,7 @@ const alunos = [
 		'Top demais, sem palavras. Só tenho a agradecer ao Curso Lero Lero.',
 		9
 	),
-	new Aluno('Lucas', 'A limpeza podia melhorar, tireando isso 4 estrelas', 12),
+	new Aluno('Lucas', 'A limpeza podia melhorar, tirando isso 4 estrelas', 12),
 	new Aluno(
 		'Rebeca',
 		'A instrutora Han teve o maior impacto sobre minha trajetória. Amei demais!!!',
